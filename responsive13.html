@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                "top top top"
+                "center1 . left"
+                "center2 . left"
+                "center3 . left"
+                "center4 . left"
+                ". . left"
+                ". . left"
+                ". . left"
+                ". . left"
+                "bottom bottom bottom";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            height: 100vh;
+        }
+        .top {
+            grid-area: top;
+            background-color: orange;
+        }
+        .center > div {
+            height: 40%;
+            background-color: lightskyblue;
+            margin: 20px;
+        }
+        .center1 { grid-area: center1; }
+        .center2 { grid-area: center2; }
+        .center3 { grid-area: center3; }
+        .center4 { grid-area: center4; }
+        .left {
+            grid-area: left;
+            background-color: yellow;
+        }
+        .bottom {
+            grid-area: bottom;
+            background-color: greenyellow;
+        }
+        .grid-container > div {
+            
+            padding: 10px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas: 
+                    "top"
+                    "center1"
+                    "center2"
+                    "center3"
+                    "center4"
+                    "left"
+                    "bottom";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="top"></div>
+        <div class="center">
+            <div class="center1"></div>
+            <div class="center2"></div>
+            <div class="center3"></div>
+            <div class="center4"></div>
+        </div>
+        <div class="left"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>
