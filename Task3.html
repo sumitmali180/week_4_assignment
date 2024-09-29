@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>.frame {
+        position: relative;
+        width: 1920px;
+        height: 860px;
+        background-image: url(./img/frame.png);
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      
+      .frame .header {
+        position: absolute;
+        width: 1320px;
+        height: 88px;
+        top: 0;
+        left: 300px;
+        background-color: transparent;
+      }
+      
+      .frame .div-header-logo {
+        position: absolute;
+        width: 809px;
+        height: 44px;
+        top: 22px;
+        left: 15px;
+      }
+      
+      .frame .link-logo-svg {
+        position: absolute;
+        width: 167px;
+        height: 32px;
+        top: 6px;
+        left: 0;
+      }
+      
+      .frame .div-desktopnav {
+        width: 612px;
+        left: 197px;
+        position: absolute;
+        height: 44px;
+        top: 0;
+      }
+      
+      .frame .div-desktopnav-item {
+        width: 101px;
+        left: 0;
+        border-radius: 100px;
+        position: absolute;
+        height: 44px;
+        top: 0;
+      }
+      
+      .frame .link-home {
+        position: absolute;
+        width: 41px;
+        height: 28px;
+        top: 7px;
+        left: 20px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        
+        font-size: 14.8px;
+        letter-spacing: 0;
+        line-height: 28.1px;
+        white-space: nowrap;
+      }
+      
+      .frame .symbol {
+        width: 15px;
+        height: 15px;
+        top: 14px;
+        left: 66px;
+        color: #eb662b;
+        font-size: 15px;
+        line-height: 15px;
+        position: absolute;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+      
+      .frame .div {
+        width: 90px;
+        left: 101px;
+        position: absolute;
+        height: 44px;
+        top: 0;
+        border-radius: 100px;
+      }
+      
+      .frame .link-tour {
+        position: absolute;
+        width: 30px;
+        height: 28px;
+        top: 7px;
+        left: 20px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #05073c;
+        font-size: 14.3px;
+        letter-spacing: 0;
+        line-height: 28.1px;
+        white-space: nowrap;
+      }
+      
+      .frame .text-wrapper {
+        width: 15px;
+        height: 15px;
+        top: 14px;
+        left: 55px;
+        color: #05073c;
+        font-size: 15px;
+        line-height: 15px;
+        position: absolute;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+      
+      .frame .link-destination-wrapper {
+        width: 119px;
+        left: 191px;
+        position: absolute;
+        height: 44px;
+        top: 0;
+        border-radius: 100px;
+      }
+      
+      .frame .link-destination {
+        position: absolute;
+        width: 79px;
+        height: 28px;
+        top: 7px;
+        left: 20px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #05073c;
+        font-size: 14.8px;
+        letter-spacing: 0;
+        line-height: 28.1px;
+        white-space: nowrap;
+      }
+      
+      .frame .link-activities-wrapper {
+        width: 104px;
+        left: 310px;
+        position: absolute;
+        height: 44px;
+        top: 0;
+        border-radius: 100px;
+      }
+      
+      .frame .link-activities {
+        position: absolute;
+        width: 65px;
+        height: 28px;
+        top: 7px;
+        left: 20px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #05073c;
+        font-size: 14.9px;
+        letter-spacing: 0;
+        line-height: 28.1px;
+        white-space: nowrap;
+      }
+      
+      .frame .div-desktopnav-item-2 {
+        width: 101px;
+        left: 415px;
+        position: absolute;
+        height: 44px;
+        top: 0;
+        border-radius: 100px;
+      }
+      
+      .frame .link-pages {
+        position: absolute;
+        width: 41px;
+        height: 28px;
+        top: 7px;
+        left: 20px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #05073c;
+        font-size: 13.9px;
+        letter-spacing: 0;
+        line-height: 28.1px;
+        white-space: nowrap;
+      }
+      
+      .frame .symbol-2 {
+        width: 15px;
+        height: 15px;
+        top: 14px;
+        left: 66px;
+        color: #05073c;
+        font-size: 15px;
+        line-height: 15px;
+        position: absolute;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+      
+      .frame .link-contact-wrapper {
+        width: 97px;
+        left: 515px;
+        position: absolute;
+        height: 44px;
+        top: 0;
+        border-radius: 100px;
+      }
+      
+      .frame .link-contact {
+        position: absolute;
+        width: 57px;
+        height: 28px;
+        top: 7px;
+        left: 20px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #05073c;
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: 28.1px;
+        white-space: nowrap;
+      }
+      
+      .frame .div-header-right {
+        position: absolute;
+        width: 368px;
+        height: 44px;
+        top: 22px;
+        left: 937px;
+      }
+      
+      .frame .div-headerdropdown {
+        position: absolute;
+        width: 92px;
+        height: 42px;
+        top: 1px;
+        left: 30px;
+        border-radius: 200px;
+      }
+      
+      .frame .text-wrapper-2 {
+        position: absolute;
+        width: 29px;
+        height: 20px;
+        top: 10px;
+        left: 20px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #05073c;
+        font-size: 13.8px;
+        letter-spacing: 0;
+        line-height: 28.1px;
+        white-space: nowrap;
+      }
+      
+      .frame .symbol-3 {
+        width: 18px;
+        height: 18px;
+        top: 11px;
+        left: 54px;
+        color: #05073c;
+        font-size: 18px;
+        line-height: 18px;
+        position: absolute;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+      
+      .frame .link-help {
+        position: absolute;
+        width: 32px;
+        height: 28px;
+        top: 7px;
+        left: 142px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #05073c;
+        font-size: 14.5px;
+        letter-spacing: 0;
+        line-height: 28.1px;
+        white-space: nowrap;
+      }
+      
+      .frame .link-sign-up {
+        position: absolute;
+        width: 51px;
+        height: 28px;
+        top: 7px;
+        left: 203px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #05073c;
+        font-size: 14.5px;
+        letter-spacing: 0;
+        line-height: 28.1px;
+        white-space: nowrap;
+      }
+      
+      .frame .link {
+        position: absolute;
+        width: 83px;
+        height: 44px;
+        top: 0;
+        left: 285px;
+        border-radius: 200px;
+        border: 1px solid;
+        border-color: #05073c;
+      }
+      
+      .frame .text-wrapper-3 {
+        position: absolute;
+        width: 42px;
+        height: 20px;
+        top: 11px;
+        left: 21px;
+        font-family: "Inter-Medium", Helvetica;
+        font-weight: 500;
+        color: #05073c;
+        font-size: 14.3px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 28px;
+        white-space: nowrap;
+      }
+      .frame div:hover{
+        color: #eb662b;
+      }
+      
+      
+      </style>
+  </head>
+  <body>
+    <div class="frame">
+      <header class="header">
+        <div class="div-header-logo">
+          <img class="link-logo-svg" src="https://i.imgur.com/E03UMNl.jpeg" />
+          <div class="div-desktopnav">
+            <div class="div-desktopnav-item">
+              <div class="link-home">Home</div>
+              <div class="symbol"> </div>
+            </div>
+            <div class="div">
+              <div class="link-tour">Tour</div>
+              <div class="text-wrapper"> </div>
+            </div>
+            <div class="link-destination-wrapper"><div class="link-destination">Destination</div></div>
+            <div class="link-activities-wrapper"><div class="link-activities">Activities</div></div>
+            <div class="div-desktopnav-item-2">
+              <div class="link-pages">Pages</div>
+              <div class="symbol-2"> </div>
+            </div>
+            <div class="link-contact-wrapper"><div class="link-contact">Contact</div></div>
+          </div>
+        </div>
+        <div class="div-header-right">
+          <div class="div-headerdropdown">
+            <div class="text-wrapper-2">USD</div>
+            <div class="symbol-3"> </div>
+          </div>
+          <div class="link-help">Help</div>
+          <div class="link-sign-up">Sign up</div>
+          <div class="link"><div class="text-wrapper-3">Log in</div></div>
+        </div>
+      </header>
+      
+    </div>
+  </body>
+</html>
