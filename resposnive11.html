@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button and Hidden Box</title>
+    <style>body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.center-button:active + .hidden-box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+}
+
+.hidden-box {
+    display: none;
+    width:200px
+}</style>
+</head>
+<body>
+    <button class="center-button">Read Information</button>
+    <div class="hidden-box">This is info</div>
+</body>
+</html>
