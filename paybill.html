@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Bills Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffc813;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .circle {
+            position: absolute;
+            width: 200px; /* Diameter = 2 * radius */
+            height: 200px; /* Diameter = 2 * radius */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 75%; /* Move circle to 75% from the right */
+            animation: rotate 2s linear forwards; /* Match with text animation duration */
+        }
+
+        .icon {
+            position: absolute;
+            width: 40px; /* Size of the icons */
+            height: 40px; /* Size of the icons */
+            opacity: 0.8;
+        }
+
+        .icon:nth-child(1) { transform: rotate(0deg) translate(100px) rotate(0deg); }
+        .icon:nth-child(2) { transform: rotate(45deg) translate(100px) rotate(-45deg); }
+        .icon:nth-child(3) { transform: rotate(90deg) translate(100px) rotate(-90deg); }
+        .icon:nth-child(4) { transform: rotate(135deg) translate(100px) rotate(-135deg); }
+        .icon:nth-child(5) { transform: rotate(180deg) translate(100px) rotate(-180deg); }
+        .icon:nth-child(6) { transform: rotate(225deg) translate(100px) rotate(-225deg); }
+        .icon:nth-child(7) { transform: rotate(270deg) translate(100px) rotate(-270deg); }
+        .icon:nth-child(8) { transform: rotate(315deg) translate(100px) rotate(-315deg); }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 25%; /* Move text to 25% from the left */
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            animation: slide 2s forwards, changeColor 2s forwards; /* Match with rotation duration */
+        }
+
+        @keyframes slide {
+            0% { left: 25%; }
+            100% { left: 50%; } /* End position at 50% */
+        }
+
+        @keyframes changeColor {
+            0% { color: white; }
+            100% { color: black; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+            <div class="icon"><i class="fas fa-bill-wave"></i></div>
+            <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
+            <div class="icon"><i class="fas fa-credit-card"></i></div>
+            <div class="icon"><i class="fas fa-receipt"></i></div>
+            <div class="icon"><i class="fas fa-wallet"></i></div>
+            <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+            <div class="icon"><i class="fas fa-store"></i></div>
+            <div class="icon"><i class="fas fa-chart-line"></i></div>
+            <div class="icon"><i class="fas fa-wallet"></i></div>
+        </div>
+        <h1 class="text">Pay Bills Instantly</h1>
+    </div>
+</body>
+</html>
