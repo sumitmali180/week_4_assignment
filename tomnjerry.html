@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Image Slide Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to bottom, purple, blue);
+        }
+
+        .jerry, .tom {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20%;
+            height: auto;
+            transition: transform 1s ease;
+        }
+
+        .jerry {
+            left: -20%;
+            z-index: 2;
+        }
+
+        .tom {
+            right: -20%;
+            z-index: 1;
+        }
+
+        .move-jerry {
+            transform: translateY(-50%) translateX(100vw);
+        }
+
+        .move-tom {
+            transform: translateY(-50%) translateX(-100vw);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://w7.pngwing.com/pngs/534/166/png-transparent-jerry-from-tom-and-jerry-jerry-mouse-tom-cat-tom-and-jerry-cartoon-tom-and-jerry-mammal-heroes-cat-like-mammal-thumbnail.png" alt="Jerry" class="jerry">
+    <img src="https://w7.pngwing.com/pngs/481/79/png-transparent-tom-the-cat-illustration-jerry-mouse-tom-cat-tom-and-jerry-cartoon-network-tom-and-jerry-mammal-heroes-cat-like-mammal-thumbnail.png" alt="Tom" class="tom">
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const jerry = document.querySelector('.jerry');
+        const tom = document.querySelector('.tom');
+        let toggle = true;
+
+        function animate() {
+            if (toggle) {
+                jerry.classList.add('move-jerry');
+                tom.classList.add('move-tom');
+            } else {
+                jerry.classList.remove('move-jerry');
+                tom.classList.remove('move-tom');
+            }
+
+            toggle = !toggle;
+
+            setTimeout(() => {
+                if (toggle) {
+                    jerry.classList.remove('move-jerry');
+                    tom.classList.remove('move-tom');
+                } else {
+                    jerry.classList.add('move-jerry');
+                    tom.classList.add('move-tom');
+                }
+            }, 2000);
+        }
+
+        animate();
+        setInterval(animate, 4000);
+    });
+</script>
+
+</body>
+</html>
